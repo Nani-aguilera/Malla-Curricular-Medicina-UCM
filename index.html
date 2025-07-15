@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular de Medicina UCM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Malla Curricular de Medicina <br> Universidad Católica del Maule</h1>
+        <p>Haz clic en los cursos para marcarlos como aprobados.</p>
+        <p class="legend">Cursos aprobados: <span class="approved-legend"></span></p>
+        <p class="legend">Cursos con prerrequisitos pendientes: <span class="prereq-pending-legend"></span></p>
+        <p class="legend">Puedes cursar (prerrequisitos cumplidos): <span class="can-take-legend"></span></p>
+    </header>
+
+    <main id="malla-container">
+        <section class="semester" id="sem-1">
+            <h2>Semestre I</h2>
+            <div class="course" data-id="mdn111" data-name="Introducción a la Profesión Médica">Introducción a la Profesión Médica (MDN-111)</div>
+            <div class="course" data-id="mdn112" data-name="Bases Biológicas de la Medicina I">Bases Biológicas de la Medicina I (MDN-112)</div>
+            <div class="course" data-id="mdn113" data-name="Química General y Orgánica">Química General y Orgánica (MDN-113)</div>
+            <div class="course" data-id="mdn114" data-name="Metodología de la Investigación I">Metodología de la Investigación I (MDN-114)</div>
+            <div class="course" data-id="mdn115" data-name="Taller de Aprendizaje Académico">Taller de Aprendizaje Académico (MDN-115)</div>
+            <div class="course" data-id="ifg100" data-name="Inglés I">Inglés I (IFG-100)</div>
+        </section>
+
+        <section class="semester" id="sem-2">
+            <h2>Semestre II</h2>
+            <div class="course" data-id="mdn121" data-name="Anatomía y Embriología I" data-prerequisites="">Anatomía y Embriología I (MDN-121)</div>
+            <div class="course" data-id="mdn122" data-name="Bases Biológicas de la Medicina II" data-prerequisites="mdn112">Bases Biológicas de la Medicina II (MDN-122)</div>
+            <div class="course" data-id="mdn123" data-name="Información y Comunicación Médica" data-prerequisites="">Información y Comunicación Médica (MDN-123)</div>
+            <div class="course" data-id="mdn124" data-name="Metodología de la Investigación II" data-prerequisites="mdn114">Metodología de la Investigación II (MDN-124)</div>
+            <div class="course" data-id="mdn125" data-name="Taller de Salud Comunitaria" data-prerequisites="">Taller de Salud Comunitaria (MDN-125)</div>
+            <div class="course" data-id="ifg200" data-name="Inglés II" data-prerequisites="ifg100">Inglés II (IFG-200)</div>
+        </section>
+
+        <section class="semester" id="sem-3">
+            <h2>Semestre III</h2>
+            <div class="course" data-id="mdn211" data-name="Anatomía y Embriología II" data-prerequisites="mdn121">Anatomía y Embriología II (MDN-211)</div>
+            <div class="course" data-id="mdn212" data-name="Neuroanatomía" data-prerequisites="mdn121">Neuroanatomía (MDN-212)</div>
+            <div class="course" data-id="mdn213" data-name="Fisiología Médica General" data-prerequisites="mdn122,mdn121">Fisiología Médica General (MDN-213)</div>
+            <div class="course" data-id="mdn214" data-name="Epidemiología" data-prerequisites="mdn124">Epidemiología (MDN-214)</div>
+            <div class="course" data-id="mdn215" data-name="Taller de Procedimientos Clínicos" data-prerequisites="mdn121">Taller de Procedimientos Clínicos (MDN-215)</div>
+            <div class="course" data-id="ifg300" data-name="Inglés III" data-prerequisites="ifg200">Inglés III (IFG-300)</div>
+        </section>
+
+        <section class="semester" id="sem-4">
+            <h2>Semestre IV</h2>
+            <div class="course" data-id="mdn221" data-name="Histología Médica" data-prerequisites="mdn211,mdn212">Histología Médica (MDN-221)</div>
+            <div class="course" data-id="mdn222" data-name="Bases Neurales de la Adaptación Humana" data-prerequisites="mdn212">Bases Neurales de la Adaptación Humana (MDN-222)</div>
+            <div class="course" data-id="mdn223" data-name="Fisiología Médica de Sistemas" data-prerequisites="mdn213">Fisiología Médica de Sistemas (MDN-223)</div>
+            <div class="course" data-id="mdn224" data-name="Patología y Fisiopatología General" data-prerequisites="mdn213">Patología y Fisiopatología General (MDN-224)</div>
+            <div class="course" data-id="mdn225" data-name="Hito Evaluativo de Integración Preclínica" data-prerequisites="mdn211,mdn212,mdn213,mdn214,mdn215">Hito Evaluativo de Integración Preclínica (MDN-225)</div>
+        </section>
+
+        <section class="semester" id="sem-5">
+            <h2>Semestre V</h2>
+            <div class="course" data-id="mdn311" data-name="Semiología" data-prerequisites="mdn225">Semiología (MDN-311)</div>
+            <div class="course" data-id="mdn312" data-name="Microbiología I" data-prerequisites="mdn225">Microbiología I (MDN-312)</div>
+            <div class="course" data-id="mdn313" data-name="Bases Farmacológicas de la Medicina I" data-prerequisites="mdn225">Bases Farmacológicas de la Medicina I (MDN-313)</div>
+            <div class="course" data-id="mdn314" data-name="Patología y Fisiopatología de Sistemas" data-prerequisites="mdn225">Patología y Fisiopatología de Sistemas (MDN-314)</div>
+        </section>
+
+        <section class="semester" id="sem-6">
+            <h2>Semestre VI</h2>
+            <div class="course" data-id="mdn321" data-name="Clínicas Integradas I" data-prerequisites="mdn311,mdn312,mdn313,mdn314">Clínicas Integradas I (MDN-321)</div>
+            <div class="course" data-id="mdn322" data-name="Microbiología II" data-prerequisites="mdn312">Microbiología II (MDN-322)</div>
+            <div class="course" data-id="mdn323" data-name="Bases Farmacológicas de la Medicina II" data-prerequisites="mdn313">Bases Farmacológicas de la Medicina II (MDN-323)</div>
+            <div class="course" data-id="mdn324" data-name="Taller Clínico Integrado" data-prerequisites="mdn311,mdn312,mdn313,mdn314">Taller Clínico Integrado (MDN-324)</div>
+            <div class="course" data-id="mfg114" data-name="Introducción a la Fe" data-prerequisites="">Introducción a la Fe (MFG-114)</div>
+        </section>
+
+        <section class="semester" id="sem-7">
+            <h2>Semestre VII</h2>
+            <div class="course" data-id="mdn411" data-name="Clínicas Integradas II" data-prerequisites="mdn321,mdn322,mdn323,mdn324">Clínicas Integradas II (MDN-411)</div>
+            <div class="course" data-id="mdn412" data-name="Psicología Médica" data-prerequisites="mdn321">Psicología Médica (MDN-412)</div>
+            <div class="course" data-id="mdn413" data-name="Salud Pública y Medicina Preventiva" data-prerequisites="mdn324">Salud Pública y Medicina Preventiva (MDN-413)</div>
+            <div class="course" data-id="mdn414" data-name="Medicina Molecular" data-prerequisites="mdn225">Medicina Molecular (MDN-414)</div>
+            <div class="course" data-id="mfg216" data-name="Ética Cristiana" data-prerequisites="">Ética Cristiana (MFG-216)</div>
+        </section>
+
+        <section class="semester" id="sem-8">
+            <h2>Semestre VIII</h2>
+            <div class="course" data-id="mdn421" data-name="Clínicas Integradas III" data-prerequisites="mdn411">Clínicas Integradas III (MDN-421)</div>
+            <div class="course" data-id="mdn422" data-name="Salud Mental y Psiquiatría" data-prerequisites="mdn411,mdn412">Salud Mental y Psiquiatría (MDN-422)</div>
+            <div class="course" data-id="mdn423" data-name="Ética Médica" data-prerequisites="mdn324,mdn411,mdn412">Ética Médica (MDN-423)</div>
+            <div class="course" data-id="cfg1" data-name="Certificación I" data-prerequisites="">Certificación I (CFG)</div>
+        </section>
+
+        <section class="semester" id="sem-9">
+            <h2>Semestre IX</h2>
+            <div class="course" data-id="mdn511" data-name="Clínicas Integradas IV" data-prerequisites="mdn421,mdn423">Clínicas Integradas IV (MDN-511)</div>
+            <div class="course" data-id="mdn512" data-name="Obstetricia y Ginecología" data-prerequisites="mdn421,mdn422,mdn423">Obstetricia y Ginecología (MDN-512)</div>
+            <div class="course" data-id="mdn513" data-name="Medicina Legal" data-prerequisites="mdn421,mdn422,mdn423">Medicina Legal (MDN-513)</div>
+            <div class="course" data-id="cfg2" data-name="Certificación II" data-prerequisites="">Certificación II (CFG)</div>
+        </section>
+
+        <section class="semester" id="sem-10">
+            <h2>Semestre X</h2>
+            <div class="course" data-id="mdn521" data-name="Clínicas Integradas V" data-prerequisites="mdn511,mdn512,mdn513">Clínicas Integradas V (MDN-521)</div>
+            <div class="course" data-id="mdn522" data-name="Pediatría y Cirugía Infantil" data-prerequisites="mdn511,mdn512,mdn513">Pediatría y Cirugía Infantil (MDN-522)</div>
+            <div class="course" data-id="mdn523" data-name="Hito Evaluativo Integración Clínica" data-prerequisites="mdn511,mdn512,mdn513">Hito Evaluativo Integración Clínica (MDN-523)</div>
+            <div class="course" data-id="cfg3" data-name="Certificación III" data-prerequisites="">Certificación III (CFG)</div>
+        </section>
+
+        <section class="semester" id="sem-11-12">
+            <h2>Semestre XI y XII</h2>
+            <div class="course" data-id="mdn611" data-name="Internado de Medicina Interna" data-prerequisites="mdn521,mdn522,mdn523">Internado de Medicina Interna (MDN-611)</div>
+            <div class="course" data-id="mdn612" data-name="Internado de Obstetricia y Ginecología" data-prerequisites="mdn521,mdn522,mdn523">Internado de Obstetricia y Ginecología (MDN-612)</div>
+            <div class="course" data-id="mdn613" data-name="Internado de Pediatría" data-prerequisites="mdn521,mdn522,mdn523">Internado de Pediatría (MDN-613)</div>
+            <div class="course" data-id="mdn614" data-name="Internado de Cirugía" data-prerequisites="mdn521,mdn522,mdn523">Internado de Cirugía (MDN-614)</div>
+        </section>
+
+        <section class="semester" id="sem-13-14">
+            <h2>Semestre XIII y XIV</h2>
+            <div class="course" data-id="mdn711" data-name="Internado de Salud Familiar" data-prerequisites="mdn611,mdn612,mdn613,mdn614">Internado de Salud Familiar (MDN-711)</div>
+            <div class="course" data-id="mdn712" data-name="Internado de Especialidades" data-prerequisites="mdn611,mdn612,mdn613,mdn614">Internado de Especialidades (MDN-712)</div>
+            <div class="course" data-id="mdn713" data-name="Internado Optativo" data-prerequisites="mdn611,mdn612,mdn613,mdn614">Internado Optativo (MDN-713)</div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Tu Nombre/Apellido]. Datos de la Malla: Universidad Católica del Maule.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+2. Contenido de style.css (Colores Pasteles y Diseño Responsivo)
+Este archivo define el aspecto visual. Es el mismo que te di antes, con los colores pasteles y el diseño responsivo que hace que se apilen en pantallas estrechas.
+
+Crea un nuevo archivo llamado style.css.
+
+Pega este código completo:
+
+CSS
+
+:root {
+    /* Paleta de colores pasteles */
+    --pastel-background: #fdfaf6; /* Un crema muy suave */
+    --pastel-text: #5c6f7b; /* Gris azulado suave */
+    --pastel-header: #9bbccf; /* Azul pastel */
+    --pastel-semester-bg: #fff; /* Blanco para los bloques de semestre */
+    --pastel-semester-border: #e0e6eb; /* Borde gris muy claro */
+    --pastel-course-default-bg: #e2f0cb; /* Verde menta claro */
+    --pastel-course-border: #aed581; /* Verde más definido */
+    --pastel-course-hover-bg: #c5e1a5; /* Verde claro al pasar el ratón */
+    --pastel-course-approved-bg: #81c784; /* Verde suave de aprobado */
+    --pastel-course-approved-text: #ffffff; /* Texto blanco para aprobado */
+    --pastel-course-prereq-pending-bg: #ffcc80; /* Naranja pastel para prerrequisitos pendientes */
+    --pastel-course-prereq-pending-text: #663300; /* Texto oscuro para pendientes */
+    --pastel-course-can-take-bg: #b3e5fc; /* Azul cielo claro para cursable */
+    --pastel-course-can-take-text: #004d40; /* Texto oscuro para cursable */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--pastel-background);
+    color: var(--pastel-text);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Desplazamiento suave si añades anclas */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--pastel-semester-border);
+}
+
+h1 {
+    color: var(--pastel-header);
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    color: var(--pastel-text);
+}
+
+.legend {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.approved-legend {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--pastel-course-approved-bg);
+    border: 1px solid var(--pastel-course-approved-bg);
+    vertical-align: middle;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.prereq-pending-legend {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--pastel-course-prereq-pending-bg);
+    border: 1px solid var(--pastel-course-prereq-pending-bg);
+    vertical-align: middle;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.can-take-legend {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--pastel-course-can-take-bg);
+    border: 1px solid var(--pastel-course-can-take-bg);
+    vertical-align: middle;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+
+#malla-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espacio entre semestres */
+}
+
+.semester {
+    background-color: var(--pastel-semester-bg);
+    border: 1px solid var(--pastel-semester-border);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    min-width: 280px; /* Ancho mínimo para cada semestre */
+    max-width: 350px; /* Ancho máximo para cada semestre */
+    flex: 1; /* Permite que los semestres ocupen el espacio disponible */
+    transition: transform 0.2s ease-in-out;
+}
+
+.semester:hover {
+    transform: translateY(-5px);
+}
+
+.semester h2 {
+    color: var(--pastel-header);
+    border-bottom: 2px solid var(--pastel-semester-border);
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.course {
+    background-color: var(--pastel-course-default-bg);
+    border: 1px solid var(--pastel-course-border);
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    font-size: 0.95em;
+    color: var(--pastel-text);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.course:last-child {
+    margin-bottom: 0;
+}
+
+.course:hover {
+    background-color: var(--pastel-course-hover-bg);
+    transform: translateY(-2px);
+}
+
+/* Estilo para cursos aprobados */
+.course.approved {
+    background-color: var(--pastel-course-approved-bg);
+    color: var(--pastel-course-approved-text);
+    border-color: #689f6b; /* Un verde un poco más oscuro */
+    font-weight: bold;
+}
+
+/* Estilo para cursos con prerrequisitos pendientes */
+.course.prereq-pending {
+    background-color: var(--pastel-course-prereq-pending-bg);
+    color: var(--pastel-course-prereq-pending-text);
+    border-color: #e6a750; /* Un naranja un poco más oscuro */
+    cursor: not-allowed; /* Indica que no se puede clicar para aprobar */
+}
+
+/* Estilo para cursos que se pueden cursar (prerrequisitos cumplidos) */
+.course.can-take {
+    background-color: var(--pastel-course-can-take-bg);
+    color: var(--pastel-course-can-take-text);
+    border-color: #81d4fa; /* Un azul un poco más oscuro */
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.85em;
+    color: var(--pastel-text);
+    padding-top: 20px;
+    border-top: 1px solid var(--pastel-semester-border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #malla-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .semester {
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
